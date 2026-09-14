@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="main">
+     
+      <section class="allElems">
+        <div class="todo elem" id="0">
+            <img src="https://plus.unsplash.com/premium_photo-1673548917296-e067951dd7de?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRvJTIwZG8lMjBsaXN0JTIwbGFwdG9wfGVufDB8fDB8fHww" alt="todo">
+            <h2>To Do list</h2></div>
+         <div class="daily elem" id="1">
+             <img src="https://images.unsplash.com/photo-1763529896738-9eafa27c1324?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fGRhaWx5JTIwcGxhbm5lcnxlbnwwfHwwfHx8MA%3D%3D" alt="Planner">
+             <h2>Daily Planner</h2></div>
+          <div class="moto elem" id="2">
+             <img src="https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdGl2YXRpb25hbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D" alt="moto">
+            <h2>Motivation</h2></div>
+           <div class="pomo elem" id="3">
+             <img src="https://plus.unsplash.com/premium_photo-1680265342674-1dbeafc588ce?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHRpbWVyfGVufDB8fDB8fHww" alt="Timer">
+            <h2>Pomodoro Timer</h2></div>
+            <div class="goals elem" id="4">
+                 <img src="https://images.unsplash.com/vector-1776791283284-f0d577ae3122?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxnb2Fsc3xlbnwwfHwwfHx8MA%3D%3D" alt="goals">
+                <h2>Daily Goals</h2></div>
+      </section>
+
+      <Section class="fullElem todo-list-fullpage">
+           <button class="back" id="0" cols="30" rows="10">Close</button>
+       <h2>Your Personalised Task List</h2>
+       <div class="todo-container">
+        <div class="addTask">
+          <form>
+          
+            <input type="text" placeholder="Enter Task">
+            <textarea placeholder="Enter Details" name="" id=""></textarea>
+            <button>Add Task</button>
+
+          </form>
+        </div>
+         <div class="allTask">
+          <div class="task">
+            <h3>Gym Jao</h3>
+            <button>Mark as Completed</button>
+          </div>
+         </div>
+       </div>
+      </Section>
+        <Section class="fullElem daily-planner-fullpage">
+              <button class="back" id="1">Close</button>
+        <h1>Daily Planner</h1>
+      </Section>
+        <Section class="fullElem motivation-fullpage">
+              <button class="back" id="2">Close</button>
+        <h1>Motivation Quote</h1>
+      </Section>
+        <Section class="fullElem pomodoro-timer-fullpage">
+              <button class="back" id="3">Close</button>
+        <h1>Pomodoro Timer</h1>
+      </Section>
+        <Section class="fullElem daily-goals-fullpage">
+              <button class="back" id="4">Close</button>
+        <h1>Daily Goals</h1>
+      </Section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
