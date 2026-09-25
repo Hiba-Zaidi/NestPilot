@@ -1,10 +1,10 @@
 :root{
-    --pri:#072227;
-    --sec:#215e7a;
-    --tri1:#236f6c;
-    --tri2:#AEFEFF;
-    --tri3:#E0AED0;
-      --tri4:#863A6F;;
+    --pri:#543310;
+    --sec:#74512D;
+    --tri1:#A67B5B;
+    --tri2:#ECB176;
+    --tri3:#FED8B1;
+      --tri4:#F93827;
 }
 
 
@@ -70,35 +70,38 @@ section.allElems{
     position:absolute;
 
 }
+
     
-
-.elem{
-    background-color:#4FBDBA;
-   overflow:hidden;
-    font-size:20px;
-    border-radius:10px;
-    height:350px;
-    width:215px;
-    position:relative;
-    transition:all ease 0.2s;
-    cursor:pointer;
-    box-shadow: 0px 5px 20px  rgba(0,0,0,0.75);
+.elem {
   
+    overflow: visible;
+    font-size: 12px;
+    border-radius: 10px;
+    height: 400px;
+    width: 215px;
+    position: relative;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.75);
+    text-align: center;
+}
+   
+  .elem h2 {
+     color:var(--tri3);
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+}      
+
+.elem img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.elem img{
-    height:100%;
-    width:100%;
-    object-fit:cover;
-}
 
-.elem h2{
-    position:absolute;
-    bottom:4%;
-    right:5%;
-    font-weight:500;
-    font-size:20px;
-}
+
+
 
 .elem:active{
     scale:0.95;
@@ -118,8 +121,9 @@ section.allElems{
 .back{
     position:absolute;
     right:5%;
-    background-color:rgba(255, 0, 0, 0.565);
-       padding: 5px 15px;
+    background-color:var(--tri3);
+    color:var(--tri4);
+       padding: 5px 15px; 
     font-size: 16px;
     border-radius: 8px;
     font-weight:600;
@@ -140,7 +144,7 @@ section.allElems{
    height:75%;
    width:100%;
    margin-top:30px;
-  
+   color:var(--tri3);
    display:flex;
    align-items:center;
    justify-content:space-between;
@@ -148,10 +152,17 @@ section.allElems{
 
 }
 
+h2{
+    color:var(--tri1);
+}
+span {
+    color:var(--tri3);
+}
+
 .todo-list-fullpage .todo-container .addTask{
     height:100%;
     width:33%;
-    background-color:var(--tri4);
+    background-color:var(--tri1);
     border-radius:20px;
      box-shadow: 0px 5px 20px  rgba(0,0,0,0.75);
     
@@ -161,7 +172,7 @@ section.allElems{
 .todo-list-fullpage .todo-container .allTask{
     height:100%;
     width:70%;
-    background-color:var(--tri3);
+    background-color:var(--tri1);
     border-radius:20px;
      box-shadow: 0px 5px 20px  rgba(0,0,0,0.75);
 }
@@ -174,7 +185,7 @@ section.allElems{
     padding:20px;
 }
 
-.todo-container .addTask form input{
+.todo-container .addTask form input#task-input{
     padding:15px 25px;
     width:100%;
     font-size:35px;
@@ -202,6 +213,7 @@ section.allElems{
     outline:none;
     border-radius:5px;
     color:var(--pri);
+    font-weight:600;
     transition:all ease 0.3s;
 }
 
@@ -212,39 +224,83 @@ section.allElems{
 .todo-list-fullpage .todo-container .allTask{
       height:100%;
     width:70%;
-    background-color:var(--tri3);
+    background-color:var(--tri1);
     border-radius:20px;
      box-shadow: 0px 5px 20px  rgba(0,0,0,0.75);
       display:flex;
-   align-items:center;
-   justify-content:space-between;
-
-   
+   align-items:flex-start;
+   flex-direction:column;
+  justify-content: flex-start;
+  gap:5px;
+   padding:20px;  
+   border:2px;
 }
-
 .task{
     display:flex;
-   align-items:center;
+    align-items:center;
     justify-content:space-between;
     width:100%;
-     background-color:var(--tri4);
- 
+    background-color:var(--pri);
+    padding:20px 25px;
+    height: 8vh;
+    overflow:hidden;
 }
-.task h3{
-    color:var(--pri);
-    font-size:25px;
- 
+.task h5{
+    color:var(--tri3);
+    font-size:20px;
+    display:flex;
+    align-items:flex-start;
+    gap:5px;
+    
+}
+.task h5 span{
+    color:var(--tri4);
+    font-size:12px;
+   
+    padding:4px 7px;
+    background-color:var(--tri3);
+    border-radius:30px;
+   
+    
+}
+.task h5 span.true{
+    opacity:1;
+}
+.task h5 span.false{
+    opacity:0;
 }
 .task button{
-    
-  background-color:var(--tri3);
-  color:var(--tri4);
-  border:none;
-  border-radius:5px;
- padding:16px;
-  font-size:15px;
-  
+    padding:15px 20px;
+    color:var(--pri);
+    background-color:var(--tri3);
+    font-size:15px;
+    border-radius:5px;
+    border:none;
+    font-weight:600;
 }
-.task button:active{
-    scale:0.97;
+
+.completeBtn.completed {
+    background-color: #4caf50;
+    color: white;
+}
+.mark-imp{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    color:var(--tri3);
+    font-size:20px;
+    padding:10px;
+    width:100%;
+    gap:15px;
+
+}
+
+
+.mark-imp input{
+  scale:1.7;
+ 
+   
+}
+.mark-imp label {
+    color:var(--tri3);
 }
