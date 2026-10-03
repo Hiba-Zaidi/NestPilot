@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productivity Dashboard</title>
-
+    <title>NestPilot | Personal Productivity Dashboard</title>
+<link rel="shortcut icon" href="./fav/apple-touch-icon.png" type="image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-
+   
     <div id="main">
+      <nav id="mainNav">
+     
+          <h2>NestPilot | Personal Productivity Dashboard</h2>
+          <div class="theme">
+    <i class="ri-sun-line"></i>
+</div>
+        </nav>
      
       <section class="allElems">
+        <header>
+            <div class="header1"> 
+                      
+                    
+                      <h1 id="currentDate"></h1>
+                    <h4>Saharanpur (UP)</h4></div>
+           <div class="header2"> 
+            <h2 id="temperature">21°C</h2>
+<h4 id="condition">Light rain</h4>
+<h3 id="precipitation">Precipitation: 35%</h3>
+<h3 id="humidity">Humidity: 49%</h3>
+<h3 id="wind">Wind: 10 km/h</h3>
+           
+          
+        </header>
+        <div class="allFeatures">
         <div class="todo elem" id="0">
             <img src="https://plus.unsplash.com/premium_photo-1673548917296-e067951dd7de?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRvJTIwZG8lMjBsaXN0JTIwbGFwdG9wfGVufDB8fDB8fHww" alt="todo">
             <h2>To Do list</h2></div>
@@ -28,7 +51,8 @@
             <h2>Pomodoro Timer</h2></div>
             <div class="goals elem" id="4">
                  <img src="https://images.unsplash.com/vector-1776791283284-f0d577ae3122?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxnb2Fsc3xlbnwwfHwwfHx8MA%3D%3D" alt="goals">
-                <h2>Daily Goals</h2></div>
+                <h2>Daily Goals</h2></div>   
+  
       </section>
 
       <Section class="fullElem todo-list-fullpage">
@@ -49,26 +73,249 @@
           </form>
         </div>
          <div class="allTask">
-         
-         
-       </div>
+         </div>
+         </div>
       </Section>
         <Section class="fullElem daily-planner-fullpage">
               <button class="back" id="1">Close</button>
-        <h1>Daily Planner</h1>
-      </Section>
+      <h2>Plan your <span>Day</span> to be more <span>Productive</span></h2>
+      <div class="day-planner">
+        <div class="daily-planner-time">
+        </Section>
         <Section class="fullElem motivation-fullpage">
               <button class="back" id="2">Close</button>
-        <h1>Motivation Quote</h1>
-      </Section>
+              <div class="motivation-fullpage-container">
+              <div class="motivation-container">
+        <div class="motivation-wrapper"> 
+          <img src="./icon.png" alt="icon">
+          <div class="motivation-1">
+            <h2><b>Quotes of the Day</b></h2>
+          </div>
+<div class="motivation-2">
+<h2></h2>
+</div>
+<div class="motivation-3">
+  <h2><b></b></h2>
+</div> </div> </div>  </div>
+       </Section>
+
         <Section class="fullElem pomodoro-timer-fullpage">
-              <button class="back" id="3">Close</button>
-        <h1>Pomodoro Timer</h1>
+        <button class="back" id="3">Close</button>
+       <h1>The <span><b>FOCUS</b></span> zone</h1>
+       <h4 class="session">Work Session</h4>
+<div class="pomo-timer">
+
+    <div class="timer-modes">
+        <button id="pomodoro">Pomodoro</button>
+        <button id="shortBreak">Short Break</button>
+        <button id="longBreak">Long Break</button>
+       <h1>25:00</h1>
+
+    <button class="start-timer">Start</button>
+    <button class="pause-timer">Pause</button>
+    <button class="reset-timer">Reset</button>
+
+</div>
       </Section>
-        <Section class="fullElem daily-goals-fullpage">
-              <button class="back" id="4">Close</button>
-        <h1>Daily Goals</h1>
-      </Section>
+          <section class="fullElem daily-goals-fullpage">
+
+   
+
+    <div class="daily-goals-app">
+
+  
+        <header class="goals-header">
+
+            <div class="goals-title">
+               <button class="back" id="4">Close</button>
+                <h1>Daily <span>Goals</span></h1>
+                <p><b>Set your important goals for today and track your progress</b></p>
+            </div>
+
+            <div class="goals-header-right">
+
+                <div class="goal-search">
+                    <span>⌕</span>
+                    <input type="text" id="goalSearch" placeholder="Search goals...">
+                </div>
+
+            
+
+                <button class="add-goal-btn" id="openGoalModal">
+                    <span>＋</span> Add Goal
+                </button>
+
+            </div>
+
+        </header>
+
+
+       
+        <div class="goal-statistics">
+
+            <div class="goal-stat-card completed-card">
+
+                <div class="stat-icon">🎯</div>
+
+                <div>
+                    <h2>
+                        <span id="completedCount">4</span> /
+                        <span id="totalCount">5</span>
+                    </h2>
+                    <p>Completed</p>
+                </div>
+
+            </div>
+
+
+            <div class="goal-stat-card score-card">
+
+                <div class="stat-icon">🏆</div>
+
+                <div>
+                    <h2 id="todayScore">80%</h2>
+                    <p>Today's Score</p>
+                </div>
+
+            </div>
+
+
+            <div class="goal-stat-card streak-card">
+
+                <div class="stat-icon">🔥</div>
+
+                <div>
+                   <h2 id="streakCount">0</h2>
+                    <p>Day Streak</p>
+                </div>
+
+            </div>
+
+
+            <div class="goal-stat-card total-card">
+
+                <div class="stat-icon">▥</div>
+
+                <div>
+                    <h2 id="totalGoals">12</h2>
+                    <p>Total Goals</p>
+                </div>
+
+            </div>
+
+
+         
+            <div class="keep-going-card">
+
+                <h2>Keep Going!</h2>
+
+                <p>
+                    Little steps make<br>
+                    big results.
+                </p>
+
+                <div class="target-decoration">🎯</div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="goals-main-content">
+
+
+            <div class="goals-table-container">
+
+                <div class="goals-table-header">
+
+                    <h2>Today's Goals</h2>
+
+                  
+
+                </div>
+
+
+              
+                <div class="goal-table-head">
+
+                    <span>Goal</span>
+                    <span>Category</span>
+                    <span>Priority</span>
+                    <span>Progress</span>
+                    <span>Target Time</span>
+                    <span>Status</span>
+                    <span>Actions</span>
+
+                </div>
+
+
+           <div id="goalsList">
+
+    <!-- EMPTY FOR NOW -->
+
+</div>
+
+
+<!-- everything after goalsList stays here -->
+
+   
+    <div class="goal-modal" id="goalModal">
+
+        <div class="goal-modal-box">
+
+            <button
+                class="close-modal"
+                id="closeGoalModal"
+            >
+                ×
+            </button>
+
+            <h2>Add New Goal</h2>
+
+            <input
+                type="text"
+                id="newGoalTitle"
+                placeholder="Enter your goal..."
+            >
+
+            <select id="newGoalCategory">
+
+                <option value="Coding">Coding</option>
+                <option value="Project">Project</option>
+                <option value="Career">Career</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+
+            </select>
+
+            <select id="newGoalPriority">
+
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="newGoalTime"
+                placeholder="Target time e.g. 8:00 PM"
+            >
+
+            <button
+                class="save-goal-btn"
+                id="saveGoal"
+            >
+                Add Goal
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
     </div>
     <script src="script.js"></script>
 </body>
